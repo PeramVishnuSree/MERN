@@ -158,3 +158,29 @@ ${jonas.job}, and ${jonas.hasDriversLicense === true ? 'has' : "doesn't have"} a
 for (let rep = 1; rep <= 10; rep +=1) {
     console.log(`rep: ${rep}`);
 };
+
+//looping through array
+// continue and break work the same
+let arr = [12,23,"justin",34,45,"blake",56,100,59]
+let arr2 = []
+for (let i = 0; i < arr.length; i ++) {
+    if (typeof(arr[i]) === 'string') continue
+    else if (arr[i] === 100) break
+    console.log(arr[i])
+    arr2.push(typeof(arr[i]))
+}
+console.log(arr2)
+
+//WHILE LOOP
+
+let rep = 1
+while (rep < 10){
+    console.log(rep)
+    rep++
+}
+
+let dice = Math.trunc(Math.random() * 6) +1; // Math.random() creates a number between 0 and 1
+while (dice != 6) {
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) +1;
+}
