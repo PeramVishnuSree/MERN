@@ -128,11 +128,33 @@ const jonas = {
     birthyear: 1991,
     job: 'archaelogist',
     friends: ['mira', 'jason', 'jared', 'adam'],
-    hasDriversLicense: true,
+    hasDriversLicense: false,
 
+    // calcAge : function () {
+    //     return 2022 - this.birthyear; //this is equivalent to self in python
+    // }
+
+    // we can also add properties to the object from inside a function
     calcAge : function () {
-        return 2022 - this.birthyear; //this is equivalent to self in python
+        this.age = 2022-this.birthyear
+        return this.age
     }
 };
 
 console.log(jonas.calcAge())
+console.log(`${jonas.first} ${jonas.last} is a ${jonas.calcAge()}-year old 
+${jonas.job}, and ${jonas.hasDriversLicense === true ? 'has' : "doesn't have"} a driver's license`)
+
+
+// **************************LOOPS**********************
+
+// FOR LOOP
+
+/* for (let <set initial value to the variable>; <codition to be evaluated before each iteration of the loop>; <change to the variable after the code block inside the loop is executed>) {
+    code block
+    };
+*/
+
+for (let rep = 1; rep <= 10; rep +=1) {
+    console.log(`rep: ${rep}`);
+};
