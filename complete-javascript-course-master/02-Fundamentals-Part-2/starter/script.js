@@ -63,3 +63,76 @@ console.log(nums[0], nums[nums.length-1])
 console.log(nums.slice(1,3))
 nums[2] = 34
 console.log(nums)
+
+//built in array methods
+const friends = ['mike', 'steve', 'pete']
+//push: adds elements to the end of the array
+// push method return the length of the new array
+let new_length = friends.push('mira')
+console.log(friends)
+console.log(new_length)
+
+// unshift: adds element to the beignning of the array
+friends.unshift('joe')
+console.log(friends)
+
+// pop method: removes element from the endd of the array adn returns it
+const popped = friends.pop()
+console.log(friends)
+console.log(popped)
+
+// shift method: removes element from the beginning of the array and returns it
+const shifted = friends.shift()
+console.log(friends)
+console.log(shifted)
+
+// indexOf: gives the index of the element specified or -1 if the element is not in the array
+console.log(friends.indexOf('mike')) // 0
+
+// includes: returns true if element is in the aray or false otherwise. uses strict equality check.
+console.log(friends.includes('mike')) //true
+console.log(friends.includes('gigi')) //false
+
+
+//********************OBJECTS*********************
+
+// data structures with key value pairs
+const john = {
+    firstname : 'john',
+    lastname : 'edwards',
+    age: 2022-1991,
+    job: 'teacher',
+    frnds: ['mira', 'joe', 'justin'],
+}
+console.log(john)
+// the elements inside the object are called properties
+// accessing the properties of an object
+console.log(john.firstname) //dot notation
+console.log(john['lastname']) // bracket notation
+// you get undefined if you try to access a key that does not exist
+let f = 'firstname'
+console.log(john.f) //undefined. you have to specify the exact expression
+console.log(john[f])//john. bracate notation can evaluate expressions inside the brackets
+console.log(john['vfvf'])//udefined
+
+// adding new properties
+john.location = "boston"
+console.log(john)
+console.log(`${john.firstname} ${john.lastname} has ${john.frnds.length} friends and his best friend is ${john.frnds[0]}`)
+
+// object methods
+// objects can have fucntions in them too. these functions are called methods of that object
+const jonas = {
+    first: 'jonas',
+    last: 'smith',
+    birthyear: 1991,
+    job: 'archaelogist',
+    friends: ['mira', 'jason', 'jared', 'adam'],
+    hasDriversLicense: true,
+
+    calcAge : function () {
+        return 2022 - this.birthyear; //this is equivalent to self in python
+    }
+};
+
+console.log(jonas.calcAge())
